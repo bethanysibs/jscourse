@@ -7,8 +7,8 @@ class Stack {
        return this.stkArr.push(element);
     }
     peek() {
-    let inputData = document.getElementById("input").value;
-       if (inputData != 0){
+    ;
+       if (this.stkArr.length != 0){
         document.getElementById("content").innerHTML = 
           "The Peek element of the stack is : " +
           this.stkArr[this.stkArr.length - 1]
@@ -44,14 +44,17 @@ function pushCreate(){
         let txt = document.createTextNode(inputData);
         let tr = document.createElement('tr');
         let td = document.createElement('td');
+        let hr = document.createElement('hr');
         td.setAttribute("class", "stack-item");
         td.setAttribute("id", [i+1]);
         td.setAttribute("data-testid", [i+1]);
        
         if (arr.length+1 <= 5){
             td.appendChild(txt);
+            td.appendChild(hr);
+
             tr.appendChild(td);
-            tBody.appendChild(tr);
+            ele.appendChild(tr);
             stack.add(inputData);
             console.log(arr);
         } else {

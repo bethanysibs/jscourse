@@ -15,6 +15,9 @@
 <!--HTML content goes here-->
 <h8k-navbar header="Stack Operation"></h8k-navbar>
 <div class="w-50 mx-auto mt-40">
+    <section>
+        <p id="content" class="text-center"></p>    
+    </section>
     <section class="layout-row align-items-start justify-content-center">
         <input type="text" class="input large" id="input" data-testid="input">
         <button type="submit" class="flat my-0" id="pushButton" data-testid="pushButton" onclick="pushCreate();">Push</button>
@@ -29,13 +32,16 @@
             <tr><td class="stack-item" id="3" data-testid="3"></td></tr>
             <tr><td class="stack-item" id="2" data-testid="2"></td></tr>
             <tr><td class="stack-item" id="1" data-testid="1"></td></tr> -->
-            <tr><td class="text-center">Stack Board</td></tr>
+            <!-- <tr><td class="text-center">Stack Board</td></tr> -->
+        </table>
+        <table>
+            <tr>
+                <td class="text-center">Stack Board</td>
+            </tr>
         </table>
       
     </section>
-    <section>
-        <p id="content"></p>    
-    </section>
+    
 </div>
 
 
@@ -43,5 +49,17 @@
 <!-- HMR and test infrastructure - DO NOT EDIT -->
 <!-- <script src="./bundle.js"></script> -->
 <script src="script.js"></script>
+
+<style>
+   td {
+        padding: 0 1em 0 1em !important;
+    }
+
+    table {
+        padding: 0;
+        margin: 0;
+    }
+
+</style>
 
 </html>
