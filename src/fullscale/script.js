@@ -32,6 +32,12 @@ class Stack {
     }
  }
 
+ //clearInput
+ function clearAllInputs(event) {
+    let allInputs = document.querySelectorAll('input');
+    allInputs.forEach(a => a.value = '');
+ }
+
 let stack = new Stack();
 arr = stack.stkArr;
 i = 5;
@@ -60,6 +66,7 @@ function pushCreate(){
         } else {
             document.getElementById("content").innerHTML = "Stack is already full!"
         }
+        clearAllInputs();
   }
 
   function peek(){
