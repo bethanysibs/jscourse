@@ -23,7 +23,7 @@
       </div>
     </div>
 
-
+<p id="output"></p>
     <form class="w-[50%] p-20">
       <fieldset>
       <div class="relative border border-gray-300 text-gray-800 bg-white shadow-lg rounded">
@@ -59,6 +59,14 @@ function getNumber (){
   
 }
 
+// let output = document.getElementById('output');
+      function clearAllInputs(event) {
+         var allInputs = document.querySelectorAll('input');
+         allInputs.forEach(singleInput => singleInput.value = '');
+        //  output.innerHTML += "Form submitted and cleared successfully! <br>";
+      }
+
+
 function list (){
   getNumber();
     b = array.length-1;
@@ -68,11 +76,16 @@ function list (){
     el.value = options;
     select.appendChild(el);
     console.log(array[b]);
+    clearAllInputs();
+
 }
 
 function remove() {
   var x = document.getElementById("formList");
-  x.remove(array[array.length]);
+  array.pop(array.length-1);
+  console.log(x.options);
+  x.remove(x.options.length-1);
+  console.log(array);
 }
 
 </script>
